@@ -22,7 +22,7 @@ $app->get('/', function ($request, $response) {
     $response->write(file_get_contents('api-docs.json'));
 });
 
-$app->get('/api/v1/authors/{id:[0-9]+}[/]',  '\Controllers\GetAuthor');
+$app->get('/api/v1/authors/{id:[0-9]+}[/]',  '\App\Controllers\GetAuthor');
 
 try {
 $app->run();

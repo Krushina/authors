@@ -5,12 +5,12 @@ $container['db'] = function() use($config) {
 };
 
 $container['AuthorModel'] = function($c) {
-    return new \Models\Author($c['db']);
+    return new \App\Models\Author($c['db']);
 };
 
 
- $container['Controllers\GetAuthor'] = function ($c) {
-   return new \Controllers\GetAuthor($c['AuthorModel']);
+ $container['\App\Controllers\GetAuthor'] = function ($c) {
+   return new \App\Controllers\GetAuthor($c['AuthorModel']);
  };
 
 
